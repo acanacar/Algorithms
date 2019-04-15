@@ -23,5 +23,14 @@ function findIntervals(arrBin, intervals) {
   return intervals
 }
 
-const x = 444022
-const binaryX = dec2bin(x)
+function findMax(X) {
+  if (Number.isInteger(X)) {
+    const binaryX = dec2bin(X)
+    const intervalArr = findIntervals(binaryX,[])
+    return (intervalArr.length>0) ? Math.max.apply(Math,intervalArr) : 0
+  }
+}
+
+const x = 51712
+const cc = findMax(x)
+console.log(cc)

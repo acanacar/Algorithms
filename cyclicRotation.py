@@ -10,4 +10,3 @@ def rotate(L, R):
     else:
         return L[-R:] + L[:-R]
 
-rotate([1,2,4,5,1,2,4],2)

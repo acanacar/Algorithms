@@ -6,4 +6,3 @@ function rotate(L, R) {
   return (lengthL > 0) ? L.slice(lengthL - R) + L.slice(0, -R) : L
 }
 
-rotate([0,1,2,3,9,1,5,7,12,14],32)

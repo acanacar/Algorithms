@@ -4,9 +4,10 @@
 def rotate(L, R):
     # 2=> 651234
     # 3=>456123
-    if len(L) > 0:
-        result = L[-R:] + L[:-R]
+    R = R % len(L)
+    if len(L) == 0 or R == 0:
+        return L
     else:
-        result = L
+        return L[-R:] + L[:-R]
 
-    return result
+rotate([1,2,4,5,1,2,4],2)

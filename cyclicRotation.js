@@ -3,6 +3,12 @@
 
 function rotate(L, R) {
   const lengthL = L.length
-  return (lengthL > 0) ? L.slice(lengthL - R) + L.slice(0, -R) : L
+  R = R % lengthL
+  if (R === 0 || lengthL === 0) {
+    return L
+  } else {
+    return L.slice(lengthL - R).concat(L.slice(0, -R))
+  }
 }
+
 

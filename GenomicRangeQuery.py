@@ -3,8 +3,6 @@ def solution(S, P, Q):
     result = []
     for i in range(len(P)):
         start_ind, end_ind = P[i], Q[i]
-        val = min(list(map(lambda x: l[x], S[start_ind:end_ind+1])))
+        val = min(list(map(lambda x: l[x], S[start_ind:end_ind + 1])))
         result.append(val)
     return result
-
-
